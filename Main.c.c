@@ -11,13 +11,13 @@
 #define MAX_ACTIVITIES 1000
 #define MAX_REQUESTS 1000
 
-#define NUM_SLOTS 8      // 8 slots per room
-#define SLOT_START 9     // first slot starts at 09:00
+#define NUM_SLOTS 8      
+#define SLOT_START 9     
 
 #define DATA_FILE "library_requests.dat"
 #define BACKUP_FILE "library_requests_backup.dat"
 
-// ================= STRUCTURES =================
+//STRUCTURES 
 
 struct Book {
     int id;
@@ -43,11 +43,11 @@ struct Room {
     int id;
     char name[50];
     int capacity;
-    int type;                   // 1 = Discussion Room, 2 = Computer Lab
-    int slotStudent[NUM_SLOTS]; // 0 = free, otherwise ID of student who booked
+    int type;                   
+    int slotStudent[NUM_SLOTS]; 
 };
 
-// Dates are stored as YYYYMMDD (e.g. 20261107) and shown as DD-MM-YYYY
+
 struct Transaction {
     int studentID;
     int bookID;
